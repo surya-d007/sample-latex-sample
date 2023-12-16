@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            background-color: white;
+        }
+    </style>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body class="">
+
+
+
+
+    <div class="container top-table  m-0">
+        <div class="row" style="width: 660px;">
+            <div class="p-0" style="width: 192px;">
+                <div class="operators-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.operators-dropdown')">
+                    <img title="x^{a}" onclick="updateTextArea('x^{a}')" src="./images/symbol-images/operators/operators_1.png" alt="" class="symbol-img height-22-px" >
+                    <img title="\frac{a}{b}" onclick="updateTextArea('\\frac{a}{b}')"src="./images/symbol-images/operators/operators_6.png" alt="" class="symbol-img">
+                    <img title="\int " onclick="updateTextArea('\\int')"  src="./images/symbol-images/operators/operators_11.png" alt="" class="symbol-img " style="height: 27px;">
+                    <img title="\bigcap" onclick="updateTextArea('\\bigcap')" src="./images/symbol-images/operators/operators_16.png" alt="" class="symbol-img height-24-px">
+                    <img title="\sum" onclick="updateTextArea('\\sum')" src="./images/symbol-images/operators/operators_21.png" alt="" class="symbol-img height-24-px">
+                    <img title="\prod" onclick="updateTextArea('\\prod')" src="./images/symbol-images/operators/operators_25.png" alt="" class="symbol-img height-23-px">
+                </div>
+                <div class="relation-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.relation-dropdown')">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col p-0">
+                                <img title="<" onclick="updateTextArea('<')" src="./images/symbol-images/relations/relations_1.png" alt="" class="symbol-img mx-0" style="height: 16px;">
+                                <img title=">" onclick="updateTextArea('>')" src="./images/symbol-images/relations/relations_2.png" alt="" class="symbol-img" style="height: 16px;">
+                                <img title="\leq" onclick="updateTextArea('\\leq')" src="./images/symbol-images/relations/relations_4.png" alt="" class="symbol-img mx-0 mx-1" style="height: 20px;">
+                                <img title="\geq" onclick="updateTextArea('\\geq')" src="./images/symbol-images/relations/relations_5.png" alt="" class="symbol-img" style="height: 21px;">
+                                <img title="=" onclick="updateTextArea('=')" src="./images/symbol-images/relations/relations_3.png" alt="" class="symbol-img mx-0 mx-1" style="height: 13px; width: 24px;" > 
+                                <img title="\doteq" onclick="updateTextArea('\\doteq')" src="./images/symbol-images/relations/relations_6.png" alt="" class="symbol-img mx-0 mt-0" style="width: 27px; height: 18px;"> 
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="brackets-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.brackets-dropdown')">
+                    <img title="\left (  \right )" onclick="updateTextArea('\\left (  \\right )')" src="./images/symbol-images/brackets/brackets_1.png" alt="" class="symbol-img height-24-px">
+                    <img title="\left\| \right\|" onclick="updateTextArea('\\left\\| \\right\\|')" src="./images/symbol-images/brackets/brackets_6.png" alt="" class="symbol-img height-24-px mx-3"> 
+                    <img title="\left\{... \right." onclick="updateTextArea('\\left\\{... \\right.')" src="./images/symbol-images/brackets/brackets_5.png" alt="" class="symbol-img img-fluid mx-0 me-2 height-24-px me-2" style="width: 30px; ">
+                    <img title="\left... \right \}" onclick="updateTextArea('\\left... \\right \\}')" src="./images/symbol-images/brackets/brackets_10.png" alt="" class="symbol-img img-fluid  d-block mx-0 height-24-px ms-2" style="width: 30px;"> 
+                </div>
+                <div class="greeklower-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.greeklower-dropdown')">
+                    <img title="\alpha" onclick="updateTextArea('\\alpha')" src="./images/symbol-images/greeklower/greeklower_1.png" alt="" class="symbol-img" style="height: 20px;">
+                    <img title="\beta" onclick="updateTextArea('\\beta')" src="./images/symbol-images/greeklower/greeklower_2.png" alt="" class="symbol-img" style="height: 20px;"> 
+                    <img title="\zeta" onclick="updateTextArea('\\zeta')" src="./images/symbol-images/greeklower/greeklower_3.png" alt="" class="symbol-img" style="height: 20px;"> 
+                    <img title="\kappa" onclick="updateTextArea('\\kappa')" src="./images/symbol-images/greeklower/greeklower_4.png" alt="" class="symbol-img" style="height: 20px;"> 
+                </div>
+                <div class="greekupper-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.greekupper-dropdown')">
+                    <img title="\Gamma" onclick="updateTextArea('\\Gamma')" src="./images/symbol-images/greekupper/greekupper_1.png" alt="" class="symbol-img" >
+                    <img title="\Delta" onclick="updateTextArea('\\Delta')" src="./images/symbol-images/greekupper/greekupper_2.png" alt="" class="symbol-img" > 
+                    <img title="\Theta" onclick="updateTextArea('\\Theta')" src="./images/symbol-images/greekupper/greekupper_3.png" alt="" class="symbol-img" > 
+                    <img title="\Lambda" onclick="updateTextArea('\\Lambda')" src="./images/symbol-images/greekupper/greekupper_4.png" alt="" class="symbol-img"> 
+                </div>
+            </div>
+
+            
+            <div class="drop-down-box  border drop-down-items-display ">
+                
+            </div>
+    
+
+
+
+            <div class="p-0" style="width: 192px; ">
+                <div class="binary-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.binary-dropdown-dropdown')" >
+                    <img title="\pm" onclick="updateTextArea('\\pm')" src="./images/symbol-images/binary/binary_0.png" alt="" class="  symbol-img" >
+                    <img title="\cap" onclick="updateTextArea('\\cap')" src="./images/symbol-images/binary/binary_1.png" alt="" class="symbol-img" >
+                    <img title="\cup" onclick="updateTextArea('\\cup')" src="./images/symbol-images/binary/binary_2.png" alt="" class="symbol-img" >
+                    <img title="\cdot" onclick="updateTextArea('\\cdot')" src="./images/symbol-images/binary/binary_3.png" alt="" class="symbol-img my-3" style="height: 4px;">
+                    <img title="\mp" onclick="updateTextArea('\\mp')" src="./images/symbol-images/binary/binary_4.png" alt="" class="symbol-img" >
+                    <img title="\Cap" onclick="updateTextArea('\\Cap')" src="./images/symbol-images/binary/binary_5.png" alt="" class="symbol-img" >
+                </div>
+                <div class="symbol-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.symbol-dropdown-dropdown')">
+                    <img title="\therefore" onclick="updateTextArea('\\therefore')" src="./images/symbol-images/Symbols/Symbols_1.png" alt="" class="symbol-img" >
+                    <img title="\partial" onclick="updateTextArea('\\partial')" src="./images/symbol-images/Symbols/Symbols_2.png" alt="" class="symbol-img" >
+                    <img title="\mathbb{P}" onclick="updateTextArea('\\mathbb{P}')" src="./images/symbol-images/Symbols/Symbols_3.png" alt="" class="symbol-img" >
+                    <img title="\measuredangle" onclick="updateTextArea('\\measuredangle')" src="./images/symbol-images/Symbols/Symbols_4.png" alt="" class="symbol-img" >
+                </div>
+                <div class="foreign-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.foreign-dropdown-dropdown')">
+                    <img title="\ae" onclick="updateTextArea('\\ae')" src="./images/symbol-images/foreign/foreign_1.png" alt="" class="symbol-img" >
+                    <img title="\AE" onclick="updateTextArea('\\AE')" src="./images/symbol-images/foreign/foreign_2.png" alt="" class="symbol-img" >
+                    <img title="\l" onclick="updateTextArea('\\l')" src="./images/symbol-images/foreign/foreign_3.png" alt="" class="symbol-img" >
+                    <img title="\L" onclick="updateTextArea('\\L')" src="./images/symbol-images/foreign/foreign_4.png" alt="" class="symbol-img" >
+                </div>
+
+
+
+
+
+                <div class="subsupset-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.subsupset-dropdown-dropdown')">
+                    <img title="\sqsubset" onclick="updateTextArea('\\sqsubset')" src="./images/symbol-images/subsupset/subsupset_1.png" alt="" class="symbol-img" >
+                    <img title="\sqsupset" onclick="updateTextArea('\\sqsupset')" src="./images/symbol-images/subsupset/subsupset_2.png" alt="" class="symbol-img" >
+                    <img title="\sqsubseteq" onclick="updateTextArea('\\sqsubseteq')" src="./images/symbol-images/subsupset/subsupset_3.png" alt="" class="symbol-img" >
+                    <img title="\sqsupseteq" onclick="updateTextArea('\\sqsupseteq')" src="./images/symbol-images/subsupset/subsupset_4.png" alt="" class="symbol-img" >
+        
+                </div> 
+
+                <div class="accents-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.accents-dropdown-dropdown')">
+                    <img title="a'" onclick="updateTextArea('a\'' )" src="./images/symbol-images/accents/accents_1.png" alt="" class="symbol-img" style="height: 21px;">
+                    <img title="a''" onclick="updateTextArea('a\'\'')" src="./images/symbol-images/accents/accents_2.png" alt="" class="symbol-img" >
+                    <img title="\dot{a}" onclick="updateTextArea('\\dot{a}')" src="./images/symbol-images/accents/accents_3.png" alt="" class="symbol-img" >
+                    <img title="\ddot{a}" onclick="updateTextArea('\\ddot{a}')" src="./images/symbol-images/accents/accents_4.png" alt="" class="symbol-img" >
+                </div>
+
+
+
+                <div class="accentsext-top d-flex flex-row align-content-center flex-wrap " onclick="displayItems('.accentsext-dropdown-dropdown')">
+                    <img title="\widetilde{abc}" onclick="updateTextArea('\\widetilde{abc}')" src="./images/symbol-images/accentsext/accentsext_1.png" alt="" class="symbol-img" >
+                    <img title="\underline{abc}" onclick="updateTextArea('\\underline{abc}')" src="./images/symbol-images/accentsext/accentsext_2.png" alt="" class="symbol-img" >
+                    <img title="\widehat{abc}" onclick="updateTextArea('\\widehat{abc}')" src="./images/symbol-images/accentsext/accentsext_3.png" alt="" class="symbol-img" >
+                    <img title="\overbrace{abc}" onclick="updateTextArea('\\overbrace{abc}')" src="./images/symbol-images/accentsext/accentsext_4.png" alt="" class="symbol-img" >
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    <div class="d-flex align-content-center flex-wrap top-symbol-navbar">
+
+        <div class="operators-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="x^{a}" onclick="updateTextArea('x^{a}')" src="./images/symbol-images/operators/operators_1.png" alt="" class="symbol-img">
+            <img title="\frac{a}{b}" onclick="updateTextArea('\\frac{a}{b}')"src="./images/symbol-images/operators/operators_6.png" alt="" class="symbol-img">
+            <img title="\int " onclick="updateTextArea('\\int')"  src="./images/symbol-images/operators/operators_11.png" alt="" class="symbol-img">
+            <img title="\bigcap" onclick="updateTextArea('\\bigcap')" src="./images/symbol-images/operators/operators_16.png" alt="" class="symbol-img">
+            <img title="\sum" onclick="updateTextArea('\\sum')" src="./images/symbol-images/operators/operators_21.png" alt="" class="symbol-img">
+            <img title="\prod" onclick="updateTextArea('\\prod')" src="./images/symbol-images/operators/operators_25.png" alt="" class="symbol-img">
+        </div>
+                        <div class="operators-dropdown" >
+                            <div class="" >
+                            <div class="container m-55">
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <div class="d-flex flex-row align-items-center">
+                                            <img title="x_{a}" onclick="updateTextArea('x_{a}')" src="./images/symbol-images/operators/operators_2.png" alt="" class="symbol-img img-fluid d-block" style="height: 16px;">
+                                            <img title="x\tfrac{a}{b}" onclick="updateTextArea('x\\tfrac{a}{b}')" src="./images/symbol-images/operators/operators_7.png" alt="" class="symbol-img img-fluid d-block" style="height: 24px;">
+                                            <img title="\int_{a}^{b}" onclick="updateTextArea('\\int_{a}^{b}')" src="./images/symbol-images/operators/operators_12.png" alt="" class="symbol-img img-fluid d-block">
+                                            <img title="\bigcap_{a}^{b}" onclick="updateTextArea('\\bigcap_{a}^{b}')" src="./images/symbol-images/operators/operators_17.png" alt="" class="symbol-img img-fluid d-block">
+                                            <img title="\sum_{a}^{b}" onclick="updateTextArea('\\sum_{a}^{b}')" src="./images/symbol-images/operators/operators_21.png" alt="" class="symbol-img img-fluid d-block">
+                                            <img title="\prod_{a}^{b}" onclick="updateTextArea('\\prod_{a}^{b}')" src="./images/symbol-images/operators/operators_26.png" alt="" class="symbol-img img-fluid d-block">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <div class="d-flex flex-row align-items-center">
+                                            <img title="x_{a}^{b}" onclick="updateTextArea('x_{a}^{b}')" src="./images/symbol-images/operators/operators_3.png" alt="" class="symbol-img img-fluid mx-auto d-block">
+                                            <img title="\frac{\partial }{\partial x}" onclick="updateTextArea('\\frac{\\partial }{\\partial x}')" src="./images/symbol-images/operators/operators_8.png" alt="" class="symbol-img img-fluid mx-auto d-block">
+                                            <img title="\oint" onclick="updateTextArea('\\oint')" src="./images/symbol-images/operators/operators_13.png" alt="" class="symbol-img img-fluid mx-auto d-block">
+                                            <img title="\bigcup" onclick="updateTextArea('\\bigcup')" src="./images/symbol-images/operators/operators_18.png" alt="" class="symbol-img img-fluid mx-auto d-block" style="width: 22px;">
+                                            <img title="\sqrt{x}" onclick="updateTextArea('\\sqrt{x}')" src="./images/symbol-images/operators/operators_22.png" alt="" class="symbol-img img-fluid mx-auto d-block">
+                                            <img title="\coprod" onclick="updateTextArea('\\coprod')" src="./images/symbol-images/operators/operators_27.png" alt="" class="symbol-img img-fluid mx-auto d-block" style="height: 26px; padding-right: 9px;">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <div class="d-flex flex-row align-items-center">
+                                            <img title="{x_{a}}^{b}" onclick="updateTextArea('{x_{a}}^{b}')" src="./images/symbol-images/operators/operators_4.png" alt="" class="symbol-img img-fluid mx-auto d-block" style="height: 25px;">
+                                            <img title="\frac{\partial^2 }{\partial x^2}" onclick="updateTextArea('\\frac{\\partial^2 }{\\partial x^2}')" src="./images/symbol-images/operators/operators_9.png" alt="" class="symbol-img img-fluid mx-auto d-block">
+                                            <img title="\oint_{a}^{b}" onclick="updateTextArea('\\oint_{a}^{b}')" src="./images/symbol-images/operators/operators_14.png" alt="" class="symbol-img img-fluid mx-auto d-block">
+                                            <img title="\bigcup_{a}^{b}" onclick="updateTextArea('\\bigcup_{a}^{b}')" src="./images/symbol-images/operators/operators_19.png" alt="" class="symbol-img img-fluid mx-auto d-block">
+                                            <img title="\sqrt[n]{x}" onclick="updateTextArea('\\sqrt[n]{x}')" src="./images/symbol-images/operators/operators_23.png" alt="" class="symbol-img img-fluid mx-auto d-block">
+                                            <img title="\coprod_{a}^{b} " onclick="updateTextArea('\\coprod_{a}^{b}')" src="./images/symbol-images/operators/operators_28.png" alt="" class="symbol-img img-fluid mx-auto d-block">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <div class="d-flex flex-row  align-items-center">
+                                            <img title="none" onclick="updateTextArea('none')" src="./images/symbol-images/operators/operators_5.png" alt="" class="symbol-img img-fluid mx-auto d-block" style="height: 20px;">
+                                            <img title="\frac{\mathrm{d} }{\mathrm{d} x}" onclick="updateTextArea('\\frac{\\mathrm{d} }{\\mathrm{d} x}')" src="./images/symbol-images/operators/operators_10.png" alt="" class="symbol-img img-fluid mx-auto  d-block ">
+                                            <img title="\iint_{a}^{b}" onclick="updateTextArea('\\iint_{a}^{b}')" src="./images/symbol-images/operators/operators_15.png" alt="" class="symbol-img img-fluid  d-block mx-auto">
+                                            <img title="\displaystyle \lim_{ x\to 0}" onclick="updateTextArea('\\displaystyle \\lim_{ x\\to 0}')" src="./images/symbol-images/operators/operators_20.png" alt="" class="symbol-img img-fluid  mx-auto d-block">
+                                            
+                                            
+
+                                            
+                                            
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </div>
+                        </div>
+                        </div>
+
+
+        <div class="brackets-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="\left (  \right )" onclick="updateTextArea('\\left (  \\right )')" src="./images/symbol-images/brackets/brackets_1.png" alt="" class="symbol-img">
+            <img title="\left\| \right\|" onclick="updateTextArea('\\left\\| \\right\\|')" src="./images/symbol-images/brackets/brackets_6.png" alt="" class="symbol-img"> 
+        </div>
+                        <div class="brackets-dropdown">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <div class="d-flex flex-row  align-items-center">
+                                            <img title="\left [  \right ]" onclick="updateTextArea('\\left [  \\right ]')" src="./images/symbol-images/brackets/brackets_2.png" alt="" class="symbol-img img-fluid  d-block">
+                                            <img title="\left< \right>" onclick="updateTextArea('\\left< \\right>')" src="./images/symbol-images/brackets/brackets_7.png" alt="" class="symbol-img img-fluid  d-block"> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <div class="d-flex flex-row  align-items-center">
+                                            <img title="\left\{ \right\}" onclick="updateTextArea('\\left\\{ \\right\\}')" src="./images/symbol-images/brackets/brackets_3.png" alt="" class="symbol-img img-fluid  d-block " style="width: 15px;">
+                                            <img title="\left \lfloor \right \rfloor" onclick="updateTextArea('\\left \\lfloor \\right \\rfloor')" src="./images/symbol-images/brackets/brackets_8.png" alt="" class="symbol-img img-fluid  d-block mx-0"   style=""> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <div class="d-flex flex-row  align-items-center">
+                                            <img title="\left| \right|" onclick="updateTextArea('\\left| \\right|')" src="./images/symbol-images/brackets/brackets_4.png" alt="" class="symbol-img img-fluid  d-block" >
+                                            <img title="\left \lceil \right \rceil" onclick="updateTextArea('\\left \\lceil \\right \\rceil')" src="./images/symbol-images/brackets/brackets_9.png" alt="" class="symbol-img img-fluid  d-block"> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col p-0">
+                                        <div class="col d-flex flex-row  align-items-center">
+                                            <img title="\left\{... \right." onclick="updateTextArea('\\left\\{... \\right.')" src="./images/symbol-images/brackets/brackets_5.png" alt="" class="symbol-img img-fluid mx-0 me-2" style="width: 30px; ">
+                                            <img title="\left... \right \}" onclick="updateTextArea('\\left... \\right \\}')" src="./images/symbol-images/brackets/brackets_10.png" alt="" class="symbol-img img-fluid  d-block mx-0" style="width: 30px;"> 
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            
+                        </div>
+                                            
+        
+                        
+
+                        </div>
+
+
+        <div class="relation-top d-flex flex-row align-content-center flex-wrap ">
+            <div class="container">
+                <div class="row">
+                    <div class="col p-0">
+                        <img title="<" onclick="updateTextArea('<')" src="./images/symbol-images/relations/relations_1.png" alt="" class="symbol-img mx-0" style="height: 16px;">
+                        <img title=">" onclick="updateTextArea('>')" src="./images/symbol-images/relations/relations_2.png" alt="" class="symbol-img" style="height: 16px;">
+                        <img title="=" onclick="updateTextArea('=')" src="./images/symbol-images/relations/relations_3.png" alt="" class="symbol-img mx-0" style="height: 13px; width: 24px;" > 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col p-0">
+                        <img title="\leq" onclick="updateTextArea('\\leq')" src="./images/symbol-images/relations/relations_4.png" alt="" class="symbol-img mx-0" style="height: 20px;">
+                        <img title="\geq" onclick="updateTextArea('\\geq')" src="./images/symbol-images/relations/relations_5.png" alt="" class="symbol-img" style="height: 21px;">
+                        <img title="\doteq" onclick="updateTextArea('\doteq')" src="./images/symbol-images/relations/relations_6.png" alt="" class="symbol-img mx-0" style="width: 27px; height: 18px;"> 
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+                        <div class="relation-dropdown">
+                            <div class="drop-down-box ">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col p-0">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img title="\leqslant" onclick="updateTextArea('\\leqslant')" src="./images/symbol-images/relations/relations_7.png" alt="" class="symbol-img img-fluid  d-block" style="height: 20px;">
+                                                <img title="\nless" onclick="updateTextArea('\\nless')" src="./images/symbol-images/relations/relations_10.png" alt="" class="symbol-img img-fluid  d-block" style="height: 24px;">
+                                                <img title="\nleqslant" onclick="updateTextArea('\\nleqslant')" src="./images/symbol-images/relations/relations_13.png" alt="" class="symbol-img img-fluid  d-block" style="height: 28px;">
+                                                <img title="\prec" onclick="updateTextArea('\\prec')" src="./images/symbol-images/relations/relations_16.png" alt="" class="symbol-img img-fluid  d-block" style="width: 20px; height: 20px;">
+                                                <img title="\preceq" onclick="updateTextArea('\\preceq')" src="./images/symbol-images/relations/relations_19.png" alt="" class="symbol-img img-fluid  d-block" style="width: 20px; height: 23px;">
+                                                <img title="\ll" onclick="updateTextArea('\\ll')" src="./images/symbol-images/relations/relations_22.png" alt="" class="symbol-img img-fluid  d-block " style="height: 15px;">
+
+                                                <img title="\geqslant" onclick="updateTextArea('\\geqslant')" src="./images/symbol-images/relations/relations_8.png" alt="" class="symbol-img img-fluid  d-block" style="height: 20px;"> 
+                                                <img title="\ngtr" onclick="updateTextArea('\\ngtr')" src="./images/symbol-images/relations/relations_11.png" alt="" class="symbol-img img-fluid  d-block" style="height: 24px;"> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <div class="col p-0">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img title="\ngeqslant" onclick="updateTextArea('\\ngeqslant')" src="./images/symbol-images/relations/relations_14.png" alt="" class="symbol-img img-fluid  d-block" style="height: 28px;"> 
+                                                <img title="\succ" onclick="updateTextArea('\\succ')" src="./images/symbol-images/relations/relations_17.png" alt="" class="symbol-img img-fluid  d-block " style="width: 20px; height: 20px;"> 
+                                                <img title="\succeq" onclick="updateTextArea('\\succeq')" src="./images/symbol-images/relations/relations_20.png" alt="" class="symbol-img img-fluid  d-block ms-1" style="width: 20px; height: 23px;"> 
+                                                <img title="\gg" onclick="updateTextArea('\\gg')" src="./images/symbol-images/relations/relations_23.png" alt="" class="symbol-img img-fluid  d-block" style="height: 15px;"> 
+
+                                                <img title="\equiv" onclick="updateTextArea('\\equiv')" src="./images/symbol-images/relations/relations_9.png" alt="" class="symbol-img img-fluid  d-block" style="height: 20px; width: 22px;"> 
+                                                <img title="\neq" onclick="updateTextArea('\neq')" src="./images/symbol-images/relations/relations_12.png" alt="" class="symbol-img img-fluid  d-block"> 
+                                                <img title="\not\equiv" onclick="updateTextArea('\\not\\equiv ')" src="./images/symbol-images/relations/relations_15.png" alt="" class="symbol-img img-fluid  d-block"> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col p-0">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img title="\overset{\underset{\mathrm{def}}{}}{=}" onclick="updateTextArea('\\overset{\\underset{\\mathrm{def}}{}}{=}')" src="./images/symbol-images/relations/relations_18.png" alt="" class="symbol-img img-fluid  d-block me-0" style="width: 25px;"> 
+                                                <img title="\sim" onclick="updateTextArea('\\sim')" src="./images/symbol-images/relations/relations_21.png" alt="" class="symbol-img img-fluid  d-block " style="height: 10px; width: 24px;"> 
+                                                <img title="\approx" onclick="updateTextArea('\\approx')" src="./images/symbol-images/relations/relations_24.png" alt="" class="symbol-img img-fluid  d-block mx-0 mt-1" style="height: 18px; width: 24px;"> 
+                                                <img title="\simeq" onclick="updateTextArea('\\simeq')" src="./images/symbol-images/relations/relations_27.png" alt="" class="symbol-img img-fluid  d-block ms-2" style="height: 20px; width: 22px;"> 
+                                                <img title="\cong" onclick="updateTextArea('\\cong')" src="./images/symbol-images/relations/relations_30.png" alt="" class="symbol-img img-fluid  d-block " style="height: 19px;"> 
+                                                <img title="\asymp" onclick="updateTextArea('\\asymp')" src="./images/symbol-images/relations/relations_33.png" alt="" class="symbol-img img-fluid  d-block " style="height: 20px; width: 20px;"> 
+                                                <img title="\propto" onclick="updateTextArea('\\propto')" src="./images/symbol-images/relations/relations_36.png" alt="" class="symbol-img img-fluid  d-block ms-2" style="height: 20px; width: 20px;"> 
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="row">
+                                        <div class="col p-0">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img title="\questeq" onclick="updateTextArea('\\questeq')" src="./images/symbol-images/relations/relations_39.png" alt="" class="symbol-img img-fluid  d-block" style="height: 27px; width: 20px;"> 
+                                                <img title="\vdash" onclick="updateTextArea('\\vdash')" src="./images/symbol-images/relations/relations_25.png" alt="" class="symbol-img img-fluid  d-block ms-2" style="height: 20px; width: 20px;">
+                                                <img title="\dashv" onclick="updateTextArea('\\dashv')" src="./images/symbol-images/relations/relations_26.png" alt="" class="symbol-img img-fluid  d-block ms-1" style="height: 20px; width: 20px;"> 
+                                                <img title="\smile" onclick="updateTextArea('\\smile')" src="./images/symbol-images/relations/relations_28.png" alt="" class="symbol-img img-fluid  d-block ms-1" style="width: 23px; height: 10px;">
+                                                <img title="\frown" onclick="updateTextArea('\\frown')" src="./images/symbol-images/relations/relations_29.png" alt="" class="symbol-img img-fluid  d-block ms-1" style="width: 23px; height: 10px;">
+                                                <img title="\models" onclick="updateTextArea('\\models')" src="./images/symbol-images/relations/relations_31.png" alt="" class="symbol-img img-fluid  d-block" style="height: 20px; width: 20px;">
+                                                <img title="\perp" onclick="updateTextArea('\\perp')" src="./images/symbol-images/relations/relations_32.png" alt="" class="symbol-img img-fluid  d-block ms-2 me-2" style="height: 20px; width: 20px;"> 
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row">
+                                        <div class="col p-0">
+                                            <div class="d-flex flex-row align-items-center">
+                                                <img title="|" onclick="updateTextArea('|')" src="./images/symbol-images/relations/relations_34.png" alt="" class="symbol-img img-fluid  d-block mx-3 mt-0" style="height: 22px;">
+                                                <img title="\parallel" onclick="updateTextArea('\\parallel')" src="./images/symbol-images/relations/relations_35.png" alt="" class="symbol-img img-fluid  d-block mx-2 me-2 mt-0 ms-3" style="height: 20px;"> 
+                                                <img title="\bowtie" onclick="updateTextArea('\\bowtie')" src="./images/symbol-images/relations/relations_37.png" alt="" class="symbol-img img-fluid  d-block me-1 mt-0 ms-2" style="height: 20px; width: 20px;">
+                                                <img title="\Join" onclick="updateTextArea('\\Join')" src="./images/symbol-images/relations/relations_38.png" alt="" class="symbol-img img-fluid  d-block me-1 mt-0 ms-2" style="height: 20px; width: 20px;"> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                                
+                                </div>
+                            </div>
+                        </div>
+
+        <div class="greeklower-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="\alpha" onclick="updateTextArea('\\alpha')" src="./images/symbol-images/greeklower/greeklower_1.png" alt="" class="symbol-img" style="height: 20px;">
+            <img title="\beta" onclick="updateTextArea('\\beta')" src="./images/symbol-images/greeklower/greeklower_2.png" alt="" class="symbol-img" style="height: 20px;"> 
+            <img title="\zeta" onclick="updateTextArea('\\zeta')" src="./images/symbol-images/greeklower/greeklower_3.png" alt="" class="symbol-img" style="height: 20px;"> 
+            <img title="\kappa" onclick="updateTextArea('\\kappa')" src="./images/symbol-images/greeklower/greeklower_4.png" alt="" class="symbol-img" style="height: 20px;"> 
+        </div>
+                            <div class="greeklower-dropdown">
+                                <div class="drop-down-box ">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <img title="\epsilon" onclick="updateTextArea('\\epsilon')" src="./images/symbol-images/greeklower/greeklower_5.png" alt="" class="symbol-img">
+                                                    <img title="\varepsilon" onclick="updateTextArea('\\varepsilon')" src="./images/symbol-images/greeklower/greeklower_6.png" alt="" class="symbol-img">
+                                                    <img title="\iota" onclick="updateTextArea('\\iota')" src="./images/symbol-images/greeklower/greeklower_7.png" alt="" class="symbol-img">
+                                                    <img title="\xi" onclick="updateTextArea('\\xi')" src="./images/symbol-images/greeklower/greeklower_8.png" alt="" class="symbol-img">
+                                                    <img title="\theta" onclick="updateTextArea('\\theta')" src="./images/symbol-images/greeklower/greeklower_9.png" alt="" class="symbol-img">
+                                                    <img title="\vartheta" onclick="updateTextArea('\\vartheta')" src="./images/symbol-images/greeklower/greeklower_10.png" alt="" class="symbol-img">
+                                                    <img title="\nu" onclick="updateTextArea('\\nu')" src="./images/symbol-images/greeklower/greeklower_11.png" alt="" class="symbol-img" style="width: 25px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <img title="\varrho" onclick="updateTextArea('\\varrho')" src="./images/symbol-images/greeklower/greeklower_12.png" alt="" class="symbol-img">
+                                                    <img title="\lambda" onclick="updateTextArea('\\lambda')" src="./images/symbol-images/greeklower/greeklower_13.png" alt="" class="symbol-img">
+                                                    <img title="\mu" onclick="updateTextArea('\\mu')" src="./images/symbol-images/greeklower/greeklower_14.png" alt="" class="symbol-img">
+                                                    <img title="\rho" onclick="updateTextArea('\\rho')" src="./images/symbol-images/greeklower/greeklower_15.png" alt="" class="symbol-img">
+                                                    <img title="\upsilon" onclick="updateTextArea('\\upsilon')" src="./images/symbol-images/greeklower/greeklower_16.png" alt="" class="symbol-img mx-0" style="width: 22px;">
+                                                    <img title="\pi" onclick="updateTextArea('\\pi')" src="./images/symbol-images/greeklower/greeklower_17.png" alt="" class="symbol-img mx-2" style="width: 25px;">
+                                                    <img title="\varpi" onclick="updateTextArea('\\varpi')" src="./images/symbol-images/greeklower/greeklower_18.png" alt="" class="symbol-img ms-0" style="width: 26px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    
+                                                    <img title="\tau" onclick="updateTextArea('\\tau')" src="./images/symbol-images/greeklower/greeklower_19.png" alt="" class="symbol-img" style="width: 25px;">
+                                                    <img title="\psi" onclick="updateTextArea('\\psi')" src="./images/symbol-images/greeklower/greeklower_20.png" alt="" class="symbol-img mx-0">
+                                                    <img title="\sigma" onclick="updateTextArea('\\sigma')" src="./images/symbol-images/greeklower/greeklower_21.png" alt="" class="symbol-img mx-3 me-1 " style="width: 25px; height: 20px;">
+                                                    <img title="\varsigma" onclick="updateTextArea('\\varsigma')" src="./images/symbol-images/greeklower/greeklower_22.png" alt="" class="symbol-img me-1">
+                                                    <img title="\chi" onclick="updateTextArea('\\chi')" src="./images/symbol-images/greeklower/greeklower_23.png" alt="" class="symbol-img mx-0 width-25-px ms-1">
+                                                    <img title="\phi" onclick="updateTextArea('\\phi')" src="./images/symbol-images/greeklower/greeklower_24.png" alt="" class="symbol-img" >
+                                                    <img title="\varphi" onclick="updateTextArea('\\varphi')" src="./images/symbol-images/greeklower/greeklower_25.png" alt="" class="symbol-img" >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    
+                                                    <img title="\delta" onclick="updateTextArea('\\delta')" src="./images/symbol-images/greeklower/greeklower_26.png" alt="" class="symbol-img">
+                                                    <img title="\omega" onclick="updateTextArea('\\omega')" src="./images/symbol-images/greeklower/greeklower_27.png" alt="" class="symbol-img width-25-px me-2" >
+                                                    <img title="\gamma" onclick="updateTextArea('\\gamma')" src="./images/symbol-images/greeklower/greeklower_28.png" alt="" class="symbol-img ms-0 me-2 ms-1">
+                                                    <img title="\eta" onclick="updateTextArea('\\eta')" src="./images/symbol-images/greeklower/greeklower_29.png" alt="" class="symbol-img ">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                
+                            </div>
+
+
+        <div class="greekupper-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="\Gamma" onclick="updateTextArea('\\Gamma')" src="./images/symbol-images/greekupper/greekupper_1.png" alt="" class="symbol-img" >
+            <img title="\Delta" onclick="updateTextArea('\\Delta')" src="./images/symbol-images/greekupper/greekupper_2.png" alt="" class="symbol-img" > 
+            <img title="\Theta" onclick="updateTextArea('\\Theta')" src="./images/symbol-images/greekupper/greekupper_3.png" alt="" class="symbol-img" > 
+            <img title="\Lambda" onclick="updateTextArea('\\Lambda')" src="./images/symbol-images/greekupper/greekupper_4.png" alt="" class="symbol-img"> 
+        </div>
+                            <div class="greekupper-dropdown">
+                                <div class="drop-down-box ">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <img title="\Xi" onclick="updateTextArea('\\Xi')" src="./images/symbol-images/greekupper/greekupper_5.png" alt="" class="symbol-img ">
+                                                    <img title="\Pi" onclick="updateTextArea('\\Pi')" src="./images/symbol-images/greekupper/greekupper_6.png" alt="" class="symbol-img ">
+                                                    <img title="\Sigma" onclick="updateTextArea('\\Sigma')" src="./images/symbol-images/greekupper/greekupper_7.png" alt="" class="symbol-img">
+                                                    <img title="\Upsilon" onclick="updateTextArea('\\Upsilon')" src="./images/symbol-images/greekupper/greekupper_8.png" alt="" class="symbol-img">
+                                                    <img title="\Phi" onclick="updateTextArea('\\Phi')" src="./images/symbol-images/greekupper/greekupper_9.png" alt="" class="symbol-img">
+                                                    <img title="\Psi" onclick="updateTextArea('\\Psi')" src="./images/symbol-images/greekupper/greekupper_10.png" alt="" class="symbol-img">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    
+                                                    <img title="\Omega" onclick="updateTextArea('\\Omega')" src="./images/symbol-images/greekupper/greekupper_11.png" alt="" class="symbol-img">
+                                                    
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        
+        <div class="binary-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="\pm" onclick="updateTextArea('\\pm')" src="./images/symbol-images/binary/binary_0.png" alt="" class="symbol-img" >
+            <img title="\cap" onclick="updateTextArea('\\cap')" src="./images/symbol-images/binary/binary_1.png" alt="" class="symbol-img" >
+            <img title="\cup" onclick="updateTextArea('\\cup')" src="./images/symbol-images/binary/binary_2.png" alt="" class="symbol-img" >
+            <img title="\cdot" onclick="updateTextArea('\\cdot')" src="./images/symbol-images/binary/binary_3.png" alt="" class="symbol-img my-3" style="height: 4px;">
+            <img title="\mp" onclick="updateTextArea('\\mp')" src="./images/symbol-images/binary/binary_4.png" alt="" class="symbol-img" >
+            <img title="\Cap" onclick="updateTextArea('\\Cap')" src="./images/symbol-images/binary/binary_5.png" alt="" class="symbol-img" >
+        </div>
+
+                            <div class="binary-dropdown-dropdown">
+                            <div class="binary-dropdown" >
+                                <div class="drop-down-box " >
+                                    <div class="container p-0">
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <img title="\Cup" onclick="updateTextArea('\\Cup')" src="./images/symbol-images/binary/binary_6.png" alt="" class="symbol-img " >
+                                                    <img title="\uplus" onclick="updateTextArea('\\uplus')" src="./images/symbol-images/binary/binary_7.png" alt="" class="symbol-img " >
+                                                    <img title="\times" onclick="updateTextArea('\\times')" src="./images/symbol-images/binary/binary_8.png" alt="" class="symbol-img" >
+                                                    <img title="\ast" onclick="updateTextArea('\\ast')" src="./images/symbol-images/binary/binary_12.png" alt="" class="symbol-img" >
+                                                    <img title="\div" onclick="updateTextArea('\\div')" src="./images/symbol-images/binary/binary_16.png" alt="" class="symbol-img" >
+                                                    <img title="\setminus" onclick="updateTextArea('\\setminus')" src="./images/symbol-images/binary/binary_20.png" alt="" class="symbol-img" >
+                                                    <img title="\dotplus" onclick="updateTextArea('\\dotplus')" src="./images/symbol-images/binary/binary_24.png" alt="" class="symbol-img" >
+                                                    <img title="\sqcap" onclick="updateTextArea('\\sqcap')" src="./images/symbol-images/binary/binary_9.png" alt="" class="symbol-img" >
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    
+                                                    <img title="\sqcup" onclick="updateTextArea('\\sqcup')" src="./images/symbol-images/binary/binary_10.png" alt="" class="symbol-img" >
+                                                    <img title="\bigsqcup" onclick="updateTextArea('\\bigsqcup')" src="./images/symbol-images/binary/binary_11.png" alt="" class="symbol-img" >
+                                                    <img title="\wedge" onclick="updateTextArea('\\wedge')" src="./images/symbol-images/binary/binary_13.png" alt="" class="symbol-img" >
+                                                    <img title="\vee" onclick="updateTextArea('\\vee')" src="./images/symbol-images/binary/binary_14.png" alt="" class="symbol-img" >
+                                                    <img title="\bigtriangleup" onclick="updateTextArea('\\bigtriangleup')" src="./images/symbol-images/binary/binary_15.png" alt="" class="symbol-img" >
+                                                    <img title="\barwedge" onclick="updateTextArea('\\barwedge')" src="./images/symbol-images/binary/binary_17.png" alt="" class="symbol-img" >
+                                                    <img title="\veebar" onclick="updateTextArea('\\veebar')" src="./images/symbol-images/binary/binary_18.png" alt="" class="symbol-img" >
+                                                    <img title="\bigtriangledown" onclick="updateTextArea('\\bigtriangledown')" src="./images/symbol-images/binary/binary_19.png" alt="" class="symbol-img" >
+                                                
+                                                </div>
+                                            </div>
+                                        </div> 
+
+
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    
+                                                    <img title="\triangleleft" onclick="updateTextArea('\\triangleleft')" src="./images/symbol-images/binary/binary_21.png" alt="" class="symbol-img" >
+                                                    <img title="\triangleright" onclick="updateTextArea('\\triangleright')" src="./images/symbol-images/binary/binary_22.png" alt="" class="symbol-img" >
+                                                    <img title="\star" onclick="updateTextArea('\\star')" src="./images/symbol-images/binary/binary_23.png" alt="" class="symbol-img" >
+                                                    
+                                                    <img title="\bigstar" onclick="updateTextArea('\\bigstar')" src="./images/symbol-images/binary/binary_27.png" alt="" class="symbol-img mt-0 ms-2" >
+                                                    <img title="\dagger" onclick="updateTextArea('\\dagger')" src="./images/symbol-images/binary/binary_32.png" alt="" class="symbol-img" >
+                                                    <img title="\ddagger" onclick="updateTextArea('\\ddagger')" src="./images/symbol-images/binary/binary_36.png" alt="" class="symbol-img mx-2 ms-3" >
+                                                    <img title="\wr" onclick="updateTextArea('\\wr')" src="./images/symbol-images/binary/binary_40.png" alt="" class="symbol-img mx-2 ms-3" >
+                                                    <img title="\square" onclick="updateTextArea('\\square')" src="./images/symbol-images/binary/binary_33.png" alt="" class="symbol-img ms-2"  >
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    
+                                                    <img title="\blacksquare" onclick="updateTextArea('\\blacksquare')" src="./images/symbol-images/binary/binary_34.png" alt="" class="symbol-img" >
+                                                    <img title="\triangle" onclick="updateTextArea('\\triangle')" src="./images/symbol-images/binary/binary_37.png" alt="" class="symbol-img ms-1" >
+                                                    <img title="\blacktriangle" onclick="updateTextArea('\\blacktriangle')" src="./images/symbol-images/binary/binary_38.png" alt="" class="symbol-img" >
+                                                    <img title="\triangledown" onclick="updateTextArea('\\triangledown')" src="./images/symbol-images/binary/binary_41.png" alt="" class="symbol-img" >
+                                                    <img title="\blacktriangledown" onclick="updateTextArea('\\blacktriangledown')" src="./images/symbol-images/binary/binary_42.png" alt="" class="symbol-img ms-1" >
+                                                    <img title="\circ" onclick="updateTextArea('\\circ')" src="./images/symbol-images/binary/binary_29.png" alt="" class="symbol-img ms-1" >
+                                                    <img title="\bullet" onclick="updateTextArea('\\bullet')" src="./images/symbol-images/binary/binary_30.png" alt="" class="symbol-img me-0" >
+                                                    <img title="\bigcirc" onclick="updateTextArea('\\bigcirc')" src="./images/symbol-images/binary/binary_31.png" alt="" class="symbol-img" >
+
+
+                                                    
+                                                    
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    
+                                                    <img title="\bigoplus" onclick="updateTextArea('\\bigoplus')" src="./images/symbol-images/binary/binary_35.png" alt="" class="symbol-img" >
+                                                    <img title="\bigotimes" onclick="updateTextArea('\\bigotimes')" src="./images/symbol-images/binary/binary_39.png" alt="" class="symbol-img" >
+                                                    <img title="\bigodot" onclick="updateTextArea('\\bigodot')" src="./images/symbol-images/binary/binary_43.png" alt="" class="symbol-img" >
+                                                    <img title="\diamond" onclick="updateTextArea('\\diamond')" src="./images/symbol-images/binary/binary_44.png" alt="" class="symbol-img ms-1" >
+                                                    <img title="\ominus" onclick="updateTextArea('\\ominus')" src="./images/symbol-images/binary/binary_45.png" alt="" class="symbol-img ms-1" >
+                                                    <img title="\oplus" onclick="updateTextArea('\\oplus')" src="./images/symbol-images/binary/binary_46.png" alt="" class="symbol-img ms-0" >
+                                                    <img title="\circledcirc" onclick="updateTextArea('\\circledcirc')" src="./images/symbol-images/binary/binary_47.png" alt="" class="symbol-img" >
+                                                    <img title="\oslash" onclick="updateTextArea('\\oslash')" src="./images/symbol-images/binary/binary_48.png" alt="" class="symbol-img ms-0" >
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    
+                                                    <img title="\otimes" onclick="updateTextArea('\\otimes')" src="./images/symbol-images/binary/binary_49.png" alt="" class="symbol-img mt-0" >
+                                                    <img title="\circledast" onclick="updateTextArea('\\circledast')" src="./images/symbol-images/binary/binary_50.png" alt="" class="symbol-img mt-0" >
+                                                    <img title="\circleddash" onclick="updateTextArea('\\circleddash')" src="./images/symbol-images/binary/binary_51.png" alt="" class="symbol-img mt-0" >
+                                                    <img title="\odot" onclick="updateTextArea('\\odot')" src="./images/symbol-images/binary/binary_52.png" alt="" class="symbol-img mt-0 ms-1" >
+
+
+                                                    <img title="\lozenge" onclick="updateTextArea('\\lozenge')" src="./images/symbol-images/binary/binary_25.png" alt="" class="symbol-img mt-0 " >
+                                                    <img title="\blacklozenge" onclick="updateTextArea('\\blacklozenge')" src="./images/symbol-images/binary/binary_26.png" alt="" class="symbol-img mt-0 " >
+                                                    <img title="\amalg" onclick="updateTextArea('\\amalg')" src="./images/symbol-images/binary/binary_28.png" alt="" class="symbol-img mt-0 ms-2" >
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        
+                                                    
+  
+                                                    
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                                
+
+        <div class="symbol-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="\therefore" onclick="updateTextArea('\\therefore')" src="./images/symbol-images/Symbols/Symbols_1.png" alt="" class="symbol-img" >
+            <img title="\partial" onclick="updateTextArea('\\partial')" src="./images/symbol-images/Symbols/Symbols_2.png" alt="" class="symbol-img" >
+            <img title="\mathbb{P}" onclick="updateTextArea('\\mathbb{P}')" src="./images/symbol-images/Symbols/Symbols_3.png" alt="" class="symbol-img" >
+            <img title="\measuredangle" onclick="updateTextArea('\\measuredangle')" src="./images/symbol-images/Symbols/Symbols_4.png" alt="" class="symbol-img" >
+        </div>
+                                 <div class="symbol-dropdown-dropdown">
+                                <div class="symbol-dropdown">
+                                    <div class="drop-down-box " >
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <img title="\because" onclick="updateTextArea('\\because')" src="./images/symbol-images/Symbols/Symbols_5.png" alt="" class="symbol-img " >
+                                                        <img title="\cdots" onclick="updateTextArea('\\cdots')" src="./images/symbol-images/Symbols/Symbols_9.png" alt="" class="symbol-img " style="height: 4px; width: 25px;" >
+                                                        <img title="\ddots" onclick="updateTextArea('\\ddots')" src="./images/symbol-images/Symbols/Symbols_13.png" alt="" class="symbol-img" style="height: 17px; width: 25px;">
+                                                        <img title="\vdots" onclick="updateTextArea('\\vdots')" src="./images/symbol-images/Symbols/Symbols_17.png" alt="" class="symbol-img" >
+                                                        <img title="\S" onclick="updateTextArea('\\S')" src="./images/symbol-images/Symbols/Symbols_21.png" alt="" class="symbol-img" >
+                                                        <img title="\P" onclick="updateTextArea('\\P')" src="./images/symbol-images/Symbols/Symbols_25.png" alt="" class="symbol-img" >
+                                                        <img title="\top" onclick="updateTextArea('\\top')" src="./images/symbol-images/Symbols/Symbols_29.png" alt="" class="symbol-img" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <img title="\imath" onclick="updateTextArea('\\imath')" src="./images/symbol-images/Symbols/Symbols_6.png" alt="" class="symbol-img " >
+                                                        <img title="\jmath" onclick="updateTextArea('\\jmath')" src="./images/symbol-images/Symbols/Symbols_10.png" alt="" class="symbol-img " >
+                                                        <img title="\Re" onclick="updateTextArea('\\Re')" src="./images/symbol-images/Symbols/Symbols_14.png" alt="" class="symbol-img " >
+                                                        <img title="\Im" onclick="updateTextArea('\\Im')" src="./images/symbol-images/Symbols/Symbols_18.png" alt="" class="symbol-img " >
+                                                        <img title="\forall" onclick="updateTextArea('\\forall')" src="./images/symbol-images/Symbols/Symbols_22.png" alt="" class="symbol-img " >
+                                                        <img title="\exists" onclick="updateTextArea('\\exists')" src="./images/symbol-images/Symbols/Symbols_26.png" alt="" class="symbol-img " >
+                                                        <img title="\angle" onclick="updateTextArea('\\angle')" src="./images/symbol-images/Symbols/Symbols_30.png" alt="" class="symbol-img " >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <img title="\mathbb{N}" onclick="updateTextArea('\\mathbb{N}')" src="./images/symbol-images/Symbols/Symbols_7.png" alt="" class="symbol-img" >
+                                                        <img title="\mathbb{Z}" onclick="updateTextArea('\\mathbb{Z}')" src="./images/symbol-images/Symbols/Symbols_11.png" alt="" class="symbol-img" >
+                                                        <img title="\mathbb{I}" onclick="updateTextArea('\\mathbb{I}')" src="./images/symbol-images/Symbols/Symbols_15.png" alt="" class="symbol-img" >
+                                                        <img title="\mathbb{Q}" onclick="updateTextArea('\\mathbb{Q}')" src="./images/symbol-images/Symbols/Symbols_19.png" alt="" class="symbol-img" >
+                                                        <img title="\mathbb{R}" onclick="updateTextArea('\\mathbb{R}')" src="./images/symbol-images/Symbols/Symbols_23.png" alt="" class="symbol-img" >
+                                                        <img title="\mathbb{C}" onclick="updateTextArea('\\mathbb{C}')" src="./images/symbol-images/Symbols/Symbols_27.png" alt="" class="symbol-img" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <img title="\sphericalangle" onclick="updateTextArea('\\sphericalangle')" src="./images/symbol-images/Symbols/Symbols_8.png" alt="" class="symbol-img" >
+                                                        <img title="\varnothing" onclick="updateTextArea('\\varnothing')" src="./images/symbol-images/Symbols/Symbols_12.png" alt="" class="symbol-img" >
+                                                        <img title="\infty" onclick="updateTextArea('\\infty')" src="./images/symbol-images/Symbols/Symbols_16.png" alt="" class="symbol-img" >
+                                                        <img title="\mho" onclick="updateTextArea('\\mho')" src="./images/symbol-images/Symbols/Symbols_20.png" alt="" class="symbol-img" >
+                                                        <img title="\wp" onclick="updateTextArea('\\wp')" src="./images/symbol-images/Symbols/Symbols_24.png" alt="" class="symbol-img" >
+                                                        <img title="\copyright" onclick="updateTextArea('\\copyright')" src="./images/symbol-images/Symbols/Symbols_28.png" alt="" class="symbol-img" >
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+
+                                            
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+        <div class="foreign-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="\ae" onclick="updateTextArea('\\ae')" src="./images/symbol-images/foreign/foreign_1.png" alt="" class="symbol-img" >
+            <img title="\AE" onclick="updateTextArea('\\AE')" src="./images/symbol-images/foreign/foreign_2.png" alt="" class="symbol-img" >
+            <img title="\l" onclick="updateTextArea('\\l')" src="./images/symbol-images/foreign/foreign_3.png" alt="" class="symbol-img" >
+            <img title="\L" onclick="updateTextArea('\\L')" src="./images/symbol-images/foreign/foreign_4.png" alt="" class="symbol-img" >
+        </div>
+
+                                <div class="foreign-dropdown-dropdown">
+                                <div class="foreign-dropdown">
+                                    <div class="drop-down-box" >
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <img title="\o" onclick="updateTextArea('\\o')" src="./images/symbol-images/foreign/foreign_5.png" alt="" class="symbol-img" >
+                                                        <img title="\O" onclick="updateTextArea('\\O')" src="./images/symbol-images/foreign/foreign_6.png" alt="" class="symbol-img" >
+                                                        <img title="\oe" onclick="updateTextArea('\\oe')" src="./images/symbol-images/foreign/foreign_7.png" alt="" class="symbol-img" >
+                                                        <img title="\OE" onclick="updateTextArea('\\OE')" src="./images/symbol-images/foreign/foreign_8.png" alt="" class="symbol-img" >
+                                                        <img title="\\ss" onclick="updateTextArea('\\ss')" src="./images/symbol-images/foreign/foreign_9.png" alt="" class="symbol-img" >
+                                                        <img title="\SS" onclick="updateTextArea('\SS')" src="./images/symbol-images/foreign/foreign_10.png" alt="" class="symbol-img" >
+                                                        <img title="\$" onclick="updateTextArea('\\$')" src="./images/symbol-images/foreign/foreign_11.png" alt="" class="symbol-img" >
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <img title="\pounds" onclick="updateTextArea('\\pounds')" src="./images/symbol-images/foreign/foreign_12.png" alt="" class="symbol-img" >
+                                                        <img title="\cent" onclick="updateTextArea('\\cent')" src="./images/symbol-images/foreign/foreign_13.png" alt="" class="symbol-img" >
+                                                        <img title="\euro" onclick="updateTextArea('\\euro')" src="./images/symbol-images/foreign/foreign_14.png" alt="" class="symbol-img mx-3" >
+                                                        <img title="\AA" onclick="updateTextArea('\\AA')" src="./images/symbol-images/foreign/foreign_15.png" alt="" class="symbol-img" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+        <div class="subsupset-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="\sqsubset" onclick="updateTextArea('\\sqsubset')" src="./images/symbol-images/subsupset/subsupset_1.png" alt="" class="symbol-img" >
+            <img title="\sqsupset" onclick="updateTextArea('\\sqsupset')" src="./images/symbol-images/subsupset/subsupset_2.png" alt="" class="symbol-img" >
+            <img title="\sqsubseteq" onclick="updateTextArea('\\sqsubseteq')" src="./images/symbol-images/subsupset/subsupset_3.png" alt="" class="symbol-img" >
+            <img title="\sqsupseteq" onclick="updateTextArea('\\sqsupseteq')" src="./images/symbol-images/subsupset/subsupset_4.png" alt="" class="symbol-img" >
+
+        </div> 
+
+                                <div class="subsupset-dropdown-dropdown">
+                                
+                                <div class="subsupset-dropdown">
+                                    <div class="drop-down-box " >
+                                        <div class="container p-0">
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <img title="\subset" onclick="updateTextArea('\\subset')" src="./images/symbol-images/subsupset/subsupset_5.png" alt="" class="symbol-img " >
+                                                        <img title="\supset" onclick="updateTextArea('\\supset')" src="./images/symbol-images/subsupset/subsupset_6.png" alt="" class="symbol-img" >
+                                                        <img title="\subseteq" onclick="updateTextArea('\\subseteq')" src="./images/symbol-images/subsupset/subsupset_7.png" alt="" class="symbol-img" >
+                                                        <img title="\supseteq" onclick="updateTextArea('\\supseteq')" src="./images/symbol-images/subsupset/subsupset_8.png" alt="" class="symbol-img" >
+                                                        <img title="\nsubseteq" onclick="updateTextArea('\\nsubseteq')" src="./images/symbol-images/subsupset/subsupset_9.png" alt="" class="symbol-img" style="height: 27px;" >
+                                                        <img title="\nsupseteq" onclick="updateTextArea('\\nsupseteq')" src="./images/symbol-images/subsupset/subsupset_10.png" alt="" class="symbol-img"  style="height: 27px;" >
+                                                        <img title="\subseteqq" onclick="updateTextArea('\\subseteqq')" src="./images/symbol-images/subsupset/subsupset_11.png" alt="" class="symbol-img" style="height: 24px;" >
+                                                        <img title="\supseteqq" onclick="updateTextArea('\\supseteqq')" src="./images/symbol-images/subsupset/subsupset_12.png" alt="" class="symbol-img" style="height: 24px;" >
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <img title="\nsubseteqq" onclick="updateTextArea('\\nsubseteqq')" src="./images/symbol-images/subsupset/subsupset_13.png" alt="" class="symbol-img mx-2 " style="height: 28px;" >
+                                                        <img title="\nsupseteqq" onclick="updateTextArea('\\nsupseteqq')" src="./images/symbol-images/subsupset/subsupset_14.png" alt="" class="symbol-img mx-2 me-1" style="height: 28px;" >
+                                                        <img title="\in" onclick="updateTextArea('\\in')" src="./images/symbol-images/subsupset/subsupset_15.png" alt="" class="symbol-img ms-3" >
+                                                        <img title="\ni" onclick="updateTextArea('\\ni')" src="./images/symbol-images/subsupset/subsupset_16.png" alt="" class="symbol-img" >
+                                                        <img title="\notin" onclick="updateTextArea('\\notin')" src="./images/symbol-images/subsupset/subsupset_17.png" alt="" class="symbol-img" style="height: 30px;" >
+                                                        
+                                                        
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                      
+                            
+
+
+
+
+
+
+
+
+
+                                                                                
+
+        <div class="accents-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="a'" onclick="updateTextArea('a\'' )" src="./images/symbol-images/accents/accents_1.png" alt="" class="symbol-img" style="height: 21px;">
+            <img title="a''" onclick="updateTextArea('a\'\'')" src="./images/symbol-images/accents/accents_2.png" alt="" class="symbol-img" >
+            <img title="\dot{a}" onclick="updateTextArea('\\dot{a}')" src="./images/symbol-images/accents/accents_3.png" alt="" class="symbol-img" >
+            <img title="\ddot{a}" onclick="updateTextArea('\\ddot{a}')" src="./images/symbol-images/accents/accents_4.png" alt="" class="symbol-img" >
+        </div>
+                                <div class="accents-dropdown-dropdown">
+
+                                
+                                <div class="accents-dropdown">
+                                    <div class="drop-down-box " >
+                                        <div class="container p-0">
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        <img title="\hat{a}" onclick="updateTextArea('\\hat{a}')" src="./images/symbol-images/accents/accents_5.png" alt="" class="symbol-img" >
+                                                        <img title="\check{a}" onclick="updateTextArea('\\check{a}')" src="./images/symbol-images/accents/accents_6.png" alt="" class="symbol-img" >
+                                                        <img title="\grave{a}" onclick="updateTextArea('\\grave{a}')" src="./images/symbol-images/accents/accents_7.png" alt="" class="symbol-img" >
+                                                        <img title="\acute{a}" onclick="updateTextArea('\\acute{a}')" src="./images/symbol-images/accents/accents_8.png" alt="" class="symbol-img" >
+                                                        <img title="\tilde{a}" onclick="updateTextArea('\\tilde{a}')" src="./images/symbol-images/accents/accents_9.png" alt="" class="symbol-img" >
+                                                        <img title="\breve{a}" onclick="updateTextArea('\\breve{a}')" src="./images/symbol-images/accents/accents_10.png" alt="" class="symbol-img" >
+                                                        <img title="\bar{a}" onclick="updateTextArea('\\bar{a}')" src="./images/symbol-images/accents/accents_11.png" alt="" class="symbol-img" >
+                                                        <img title="\vec{a}" onclick="updateTextArea('\\vec{a}')" src="./images/symbol-images/accents/accents_12.png" alt="" class="symbol-img" >
+                                                        <img title="\not{a}" onclick="updateTextArea('\\not{a}')" src="./images/symbol-images/accents/accents_13.png" alt="" class="symbol-img" style="height: 25px;" >
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="row">
+                                                <div class="col p-0">
+                                                    <div class="d-flex flex-row align-items-center">
+                                                        
+                                                        <img title="a^{\circ}" onclick="updateTextArea('a^{\\circ}')" src="./images/symbol-images/accents/accents_14.png" alt="" class="symbol-img" >
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+        
+        <div class="accentsext-top d-flex flex-row align-content-center flex-wrap ">
+            <img title="\widetilde{abc}" onclick="updateTextArea('\\widetilde{abc}')" src="./images/symbol-images/accentsext/accentsext_1.png" alt="" class="symbol-img" >
+            <img title="\underline{abc}" onclick="updateTextArea('\\underline{abc}')" src="./images/symbol-images/accentsext/accentsext_2.png" alt="" class="symbol-img" >
+            <img title="\widehat{abc}" onclick="updateTextArea('\\widehat{abc}')" src="./images/symbol-images/accentsext/accentsext_3.png" alt="" class="symbol-img" >
+            <img title="\overbrace{abc}" onclick="updateTextArea('\\overbrace{abc}')" src="./images/symbol-images/accentsext/accentsext_4.png" alt="" class="symbol-img" >
+        </div>
+                          
+                            <div class="accentsext-dropdown-dropdown">
+
+                            
+                            <div class="accentsext-dropdown">
+                                <div class="drop-down-box " >
+                                    <div class="container p-0">
+                                        <div class="row">
+                                            <div class="col p-0">
+                                                <div class="d-flex flex-row align-items-center">
+                                                    <img title="\underbrace{abc}" onclick="updateTextArea('\\underbrace{abc}')" src="./images/symbol-images/accentsext/accentsext_6.png" alt="" class="symbol-img" >
+                                                    <img title="\overleftarrow{abc}" onclick="updateTextArea('\\overleftarrow{abc}')" src="./images/symbol-images/accentsext/accentsext_5.png" alt="" class="symbol-img" >
+                                                    <img title="\overrightarrow{abc}" onclick="updateTextArea('\\overrightarrow{abc}')" src="./images/symbol-images/accentsext/accentsext_7.png" alt="" class="symbol-img" >
+                                                    <img title="\overline{abc}" onclick="updateTextArea('\\overline{abc}')" src="./images/symbol-images/accentsext/accentsext_9.png" alt="" class="symbol-img" >
+                                                    <img title="\overset{a}{abc}" onclick="updateTextArea('\\overset{a}{abc}')" src="./images/symbol-images/accentsext/accentsext_8.png" alt="" class="symbol-img" >
+                                                    <img title="\underset{a}{abc}" onclick="updateTextArea('\\underset{a}{abc}')" src="./images/symbol-images/accentsext/accentsext_10.png" alt="" class="symbol-img" >
+                                                    
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                                                  
+
+        
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="position-relative">
+        <div class="form-floating mb-3 ">
+            <textarea class="form-control pb-5"  id="myTextarea" name="multilineInput" rows="10" cols="60" style="height: 200px;"></textarea>
+        </div>
+
+        <div class="position-absolute" style="bottom:10px; right: 20px;">
+            <button type="button" class="btn btn-info">Info</button>
+        </div>
+        <div class="position-absolute" style="bottom:10px; right: 100px;">
+            <button type="button" class="btn btn-info">Info</button>
+        </div>
+        <div class="position-absolute" style="bottom:10px; right: 180px;">
+            <button type="button" class="btn btn-info">Info</button>
+        </div>
+    </div>  
+    
+
+
+
+
+    <div class="container output-eqation-img m-0">
+        <div class="row ">
+            <div class="col d-flex justify-content-center align-items-center px-0">
+                <img src="./images/sample.png"  alt=""  class="my-4 img-fluid">
+            </div>
+        </div>
+    </div>
+    
+    <p id="outputText" class="lead">$$$$</p>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+    
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    
+
+
+
+    <script>
+        function displayItems(items_to_be_displayed) {
+                    var itemsContainer = document.querySelector(items_to_be_displayed);
+                    var itemsDisplay = document.querySelector('.drop-down-items-display');
+
+                    // Show items
+                    
+
+                    // Copy items content to items-display
+                    itemsDisplay.innerHTML = itemsContainer.innerHTML;
+
+                    // Disable the button after displaying items
+                }
+    </script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .items {
+            display: none;
+        }
+    </style>
+    <title>Mouseover Example</title>
+</head>
+<body>
+
+<div class="title" onmouseover="showItems()" onmouseout="hideItems()">Title</div>
+<div class="items" onmouseover="showItems()" onmouseout="hideItems()">Items</div>
+
+<script>
+    function showItems() {
+        document.querySelector('.items').style.display = 'block';
+    }
+
+    function hideItems() {
+        document.querySelector('.items').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
+    
